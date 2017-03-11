@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "6"
+services:
+  - mongodb
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku
+  app:
+    master: lilaofthedayapi
+  strategy: api
+  api_key:
+     secure: ""
